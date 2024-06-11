@@ -3,6 +3,7 @@ FROM rasa/rasa:latest-full
 
 # Set environment variables
 ENV PYTHONUNBUFFERED 1
+ENV PORT 5005
 
 # Copy the Rasa project files
 COPY . /app
