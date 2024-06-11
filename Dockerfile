@@ -13,5 +13,8 @@ WORKDIR /app
 # Expose the port
 EXPOSE 5005
 
-# Run the Rasa server
-CMD ["rasa", "run", "--model", "models", "--enable-api", "--cors", "*", "--port", "5005"]
+# Set the entrypoint to Rasa
+ENTRYPOINT ["rasa"]
+
+# Default command to run the server
+CMD ["run", "--model", "models", "--enable-api", "--cors", "*", "--port", "5005"]
