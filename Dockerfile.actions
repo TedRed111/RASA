@@ -18,4 +18,4 @@ RUN pip install -r requirements.txt
 EXPOSE 5055
 
 # Run the action server
-CMD ["rasa", "run", "actions"]
+CMD ["rasa", "run", "actions", "--port", "5055"]

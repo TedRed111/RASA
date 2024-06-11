@@ -3,6 +3,7 @@ FROM rasa/rasa:latest-full
 
 # Set environment variables
 ENV PYTHONUNBUFFERED 1
+ENV PORT 5005  # Specify the port environment variable
 
 # Copy the Rasa project files
 COPY . /app
@@ -14,4 +15,4 @@ WORKDIR /app
 EXPOSE 5005
 
 # Run the Rasa server
-CMD ["rasa", "run", "--model", "models", "--enable-api", "--cors", "*"]
+CMD ["rasa", "run", "--model", "models", "--enable-api", "--cors", "*", "--port", "5005"]
